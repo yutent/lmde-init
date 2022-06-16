@@ -127,6 +127,7 @@ if [ "$none_caps" = "" ]; then
 fi
 
 if [ "$none_caps" = "y" ]; then
+  cp ./home/.xinitrc ~/
   cp ./home/.Xmodmap ~/
   xmodmap ~/.Xmodmap
   echo '修改成功  ^_^'
