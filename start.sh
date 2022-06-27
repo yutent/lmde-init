@@ -2,7 +2,7 @@
 
 echo '卸载无用软件: '
 echo '  - libreoffice   sticky'
-echo '  - firefox   thunderbird'
+echo '  - firefox   thunderbird   xed'
 echo '  - pix  drawing  gnome-calendar   simple-scan   onboard'
 echo '  - hexchat   transmission-gtk    hypnotix rhythmbox'
 echo '  - printer-driver  ftp   ppp   pptp-linux    redshift'
@@ -13,7 +13,7 @@ echo '  - '
 sleep 2
 
 apt remove libreoffice-* sticky -y
-apt remove firefox thunderbird pix drawing gnome-calendar simple-scan onboard -y
+apt remove firefox thunderbird xed pix drawing gnome-calendar simple-scan onboard -y
 apt remove hexchat transmission-gtk hypnotix rhythmbox rhythmbox-plugins rhythmbox-plugin-tray-icon -y
 apt remove printer-driver-*  ftp ppp pptp-linux redshift -y
 apt remove mint-backgrounds-ulyana mint-backgrounds-ulyssa mint-backgrounds-uma mintreport mintbackup mintwelcome -y
@@ -127,7 +127,7 @@ if [ "$none_caps" = "" ]; then
 fi
 
 if [ "$none_caps" = "y" ]; then
-  cp ./home/.xinitrc ~/
+  cp ./home/.xsession ~/
   cp ./home/.Xmodmap ~/
   xmodmap ~/.Xmodmap
   echo '修改成功  ^_^'
